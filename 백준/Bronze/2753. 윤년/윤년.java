@@ -6,6 +6,9 @@ public class Main {
 		
 		//년도를 입력 받는다!
 		int year = scan.nextInt();
+
+		//scanner 닫기!
+		scan.close();
 		
 		// 윤년O >> 1
 		if((year % 4 == 0 && year % 100 != 0) || (year % 4 == 0 && year % 400 == 0)) {
