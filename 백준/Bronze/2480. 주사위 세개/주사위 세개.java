@@ -11,40 +11,24 @@ public class Main {
 
 		scan.close();
 
-		// 상금
-		int prize = 0;
-
-		// A와 B가 같을 경우 中
-		if (A == B) {
-			// A,B,C 모두 같은 경우 (A==B==C)
-			if (B == C) {
-				prize = 10000 + (A * 1000);
-			}
-
-			// A와 B만 같은 경우 (A==B=/=C)
-			else {
-				prize = 1000 + (A * 100);
-			}
+		//A와 B와 C가 모두 같은 경우
+		if(A == B && B == C) {
+			System.out.print(10000 + A*1000);
 		}
-
-		// A와 B가 다른 경우 中
-		else {
-			// A와 C가 같고 B만 다른 경우(A==C=/=B)
-			if (A == C) {
-				prize = 1000 + (A * 100);
-			} else {
-				// A와 B가 다르고 B와 C는 같은 경우 (A=/=B==C)
-				if (B == C) {
-					prize = 1000 + (B * 100);
-				}
-				// A와 B와 C 모두 다른 경우(A=/=B=/=C)
-				else {
-					//Math.max함수로 최댓값 찾기
-					prize = Math.max(Math.max(A, B), C) * 100;
-				}
-			}
-		}
-		//상금 출력
-		System.out.println(prize);
-	}
+		
+		//A와 B가 같거나 A와 C가 같은 경우
+        else if(A == B || A == C) {
+        	System.out.print(1000 + A*100);
+        }
+		
+		//B와 C가 같은 경우
+        else if(B == C) {
+        	System.out.print(1000 + B*100);
+        }
+		
+		//A와 B와 C가 모두 다른 경우
+        else {
+        	System.out.print((Math.max(Math.max(A, B), C)*100));	//Math.max함수로 최댓값 찾기
+        }
+    }
 }
