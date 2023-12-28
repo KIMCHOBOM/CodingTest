@@ -30,5 +30,5 @@ public class Main {
 	        else {
 	        	System.out.print((Math.max(Math.max(A, B), C)*100));	//Math.max함수로 최댓값 찾기
 	        }
-    }
+    	}
 }
