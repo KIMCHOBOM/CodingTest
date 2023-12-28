@@ -5,8 +5,8 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		
 		//좌표를 입력 받는다!
-		int x = scan.nextInt();
-		int y = scan.nextInt();
+		int x = scan.nextInt();	//(−1000 ≤ x ≤ 1000; x ≠ 0)
+		int y = scan.nextInt();	//(−1000 ≤ y ≤ 1000; y ≠ 0)
 		
 		scan.close();
 		
