@@ -11,8 +11,6 @@ public class Main {
 
 		scan.close();
 
-		// 최고값
-		int max = 0;
 		// 상금
 		int prize = 0;
 
@@ -41,25 +39,12 @@ public class Main {
 				}
 				// A와 B와 C 모두 다른 경우(A=/=B=/=C)
 				else {
-					// 세 수중 최고 값 구하기
-					max = A;
-					if (max <= B) {
-						max = B;
-						if (max <= C) {
-							max = C;
-						}
-					} else {
-						if (max <= C) {
-							max = C;
-						}
-					}
-					prize = max * 100;
+					//Math.max함수로 최댓값 찾기
+					prize = Math.max(Math.max(A, B), C) * 100;
 				}
 			}
 		}
-		
 		//상금 출력
 		System.out.println(prize);
-
 	}
 }
