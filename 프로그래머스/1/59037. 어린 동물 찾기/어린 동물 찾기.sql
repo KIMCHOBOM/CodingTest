@@ -1,11 +1,2 @@
--- ANIMAL_INS
--- 아이디, 이름
--- ANIMAL_ID, NAME
--- 젊은 동물 INTAKE_CONDITION != 'Aged'
--- 정렬 : 아이디
+-- 코드를 입력하세요
 SELECT
-    ANIMAL_ID
-    , NAME
-FROM ANIMAL_INS
-WHERE INTAKE_CONDITION != 'Aged'
-ORDER BY ANIMAL_ID;
