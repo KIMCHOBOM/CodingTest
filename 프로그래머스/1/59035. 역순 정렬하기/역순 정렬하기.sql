@@ -1,0 +1,8 @@
+-- ANIMAL_INS
+-- 이름, 보호 시작일
+-- 정렬 ANIMAL_ID 역순
+SELECT
+    NAME
+    , DATETIME
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID DESC;
