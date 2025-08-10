@@ -1,0 +1,13 @@
+--ANIMAL_INS
+--이름
+--NAEM
+--가장 먼저 들어온 동물 이름
+SELECT
+    NAME
+FROM (
+    SELECT
+        NAME
+    FROM ANIMAL_INS
+    ORDER BY DATETIME
+)
+WHERE ROWNUM = 1;
